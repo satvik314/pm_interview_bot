@@ -11,10 +11,10 @@ from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, M
 from langchain.callbacks import get_openai_callback
 
 import os
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
-# os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 # defining LLM and memory
 llm = ChatOpenAI(model = "gpt-4", temperature = 0.5)
